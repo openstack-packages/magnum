@@ -249,7 +249,8 @@ mkdir -p %{buildroot}%{_sharedstatedir}/%{service}/
 mkdir -p %{buildroot}%{_sharedstatedir}/%{service}/certificates/
 mkdir -p %{buildroot}%{_sysconfdir}/%{service}/
 
-install -p -D -m 640 etc/magnum/magnum.conf.sample %{buildroot}%{_sysconfdir}/%{service}/magnum.conf
+oslo-config-generator --config-file etc/magnum/magnum-config-generator.conf > %{buildroot}%{_sysconfdir}/%{service}/magnum.conf
+chmod 640 %{buildroot}%{_sysconfdir}/%{service}/magnum.conf
 install -p -D -m 640 etc/magnum/policy.json %{buildroot}%{_sysconfdir}/%{service}
 
 %check
