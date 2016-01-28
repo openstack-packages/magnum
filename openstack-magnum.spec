@@ -20,6 +20,7 @@ BuildRequires: git
 BuildRequires: python2-devel
 BuildRequires: python-pbr
 BuildRequires: python-setuptools
+BuildRequires: python-oslo-config
 
 BuildRequires: systemd-units
 
@@ -220,6 +221,8 @@ rm -rf {test-,}requirements{-bandit,}.txt tools/{pip,test}-requires
 find contrib -name tests -type d | xargs rm -rf
 
 %build
+PYTHONPATH=. oslo-config-generator --config-file=etc/magnum/magnum-config-generator.conf
+
 %{__python2} setup.py build
 
 %install
@@ -327,4 +330,3 @@ exit 0
 %systemd_postun_with_restart %{name}-api.service
 
 %changelog
-
