@@ -1,0 +1,7 @@
+Verified+1: rdo-ci-jenkins <whayutin+rdocijenkins@redhat.com>
+Code-Review+2: Haïkel Guémar <haikel.guemar@gmail.com>
+Submitted-by: Haïkel Guémar <haikel.guemar@gmail.com>
+Submitted-at: Mon, 14 Mar 2016 14:17:09 +0100
+Reviewed-on: https://review.gerrithub.io/265943
+Project: openstack-packages/magnum
+Branch: refs/heads/rpm-master
