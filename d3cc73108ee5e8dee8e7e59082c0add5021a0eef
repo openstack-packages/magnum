@@ -1,0 +1,9 @@
+Code-Review+2: Alan Pevec <alan.pevec@redhat.com>
+Verified+1: rdo-ci-jenkins <whayutin+rdocijenkins@redhat.com>
+Code-Review+2: David Moreau Simard <dms@redhat.com>
+Verified+1: David Moreau Simard <dms@redhat.com>
+Submitted-by: David Moreau Simard <dms@redhat.com>
+Submitted-at: Thu, 17 Mar 2016 23:06:20 +0100
+Reviewed-on: https://review.gerrithub.io/266576
+Project: openstack-packages/magnum
+Branch: refs/heads/rpm-master
