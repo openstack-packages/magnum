@@ -254,6 +254,7 @@ mkdir -p %{buildroot}%{_sysconfdir}/%{service}/
 oslo-config-generator --config-file etc/magnum/magnum-config-generator.conf --output-file %{buildroot}%{_sysconfdir}/%{service}/magnum.conf
 chmod 640 %{buildroot}%{_sysconfdir}/%{service}/magnum.conf
 install -p -D -m 640 etc/magnum/policy.json %{buildroot}%{_sysconfdir}/%{service}
+install -p -D -m 640 etc/magnum/api-paste.ini %{buildroot}%{_sysconfdir}/magnum/api-paste.ini
 
 %check
 %{__python2} setup.py test ||
@@ -277,6 +278,7 @@ install -p -D -m 640 etc/magnum/policy.json %{buildroot}%{_sysconfdir}/%{service
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-%{service}
 %config(noreplace) %attr(-, root, %{service}) %{_sysconfdir}/%{service}/magnum.conf
 %config(noreplace) %attr(-, root, %{service}) %{_sysconfdir}/%{service}/policy.json
+%config(noreplace) %attr(-, root, %{service}) %{_sysconfdir}/%{service}/api-paste.ini
 %pre common
 # 1870:1870 for magnum - rhbz#845078
 getent group %{service} >/dev/null || groupadd -r --gid 1870 %{service}
