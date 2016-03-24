@@ -1,14 +1,17 @@
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 %global service magnum
 
+
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:		openstack-%{service}
 Summary:	Container Management project for OpenStack
-Version:	XXX
-Release:	XXX
+Version:	2.0.0
+Release:	1%{?dist}
 License:	ASL 2.0
 URL:		https://github.com/openstack/magnum.git
 
-Source0:	http://tarballs.openstack.org/%{service}/%{service}-%{version}.tar.gz
+Source0:	http://tarballs.openstack.org/%{service}/%{service}-%{version}%{?milestone}.tar.gz
 
 Source1:	%{service}.logrotate
 Source2:	%{name}-api.service
@@ -333,3 +336,5 @@ exit 0
 
 %changelog
 
+* Thu Mar 24 2016 RDO <rdo-list@redhat.com> 2.0.0-0.1
+- RC1 Rebuild for Mitaka 
