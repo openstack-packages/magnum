@@ -74,6 +74,7 @@ Requires: python-glanceclient
 Requires: python-heatclient
 Requires: python-neutronclient
 Requires: python-novaclient
+Requires: python-k8sclient
 Requires: python-keystoneclient
 
 Requires: python-requests
@@ -199,6 +200,7 @@ BuildRequires: python-glanceclient
 BuildRequires: python-heatclient
 BuildRequires: python-neutronclient
 BuildRequires: python-novaclient
+BuildRequires: python-k8sclient
 BuildRequires: python-keystoneclient
 
 BuildRequires: python-requests
@@ -213,7 +215,7 @@ Magnum is an OpenStack project which offers container orchestration engines
 for deploying and managing containers as first class resources in OpenStack.
 
 %prep
-%setup -q -n %{service}-%{upstream_version}
+%autosetup -n %{service}-%{upstream_version} -S git
 
 # Let's handle dependencies ourselves
 rm -rf {test-,}requirements{-bandit,}.txt tools/{pip,test}-requires
