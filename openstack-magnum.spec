@@ -74,6 +74,7 @@ Requires: python-glanceclient
 Requires: python-heatclient
 Requires: python-neutronclient
 Requires: python-novaclient
+Requires: python-k8sclient
 Requires: python-keystoneclient
 
 Requires: python-requests
@@ -199,6 +200,7 @@ BuildRequires: python-glanceclient
 BuildRequires: python-heatclient
 BuildRequires: python-neutronclient
 BuildRequires: python-novaclient
+BuildRequires: python-k8sclient
 BuildRequires: python-keystoneclient
 
 BuildRequires: python-requests
