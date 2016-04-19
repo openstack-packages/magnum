@@ -1,0 +1,7 @@
+Verified+1: rdo-ci-jenkins <whayutin+rdocijenkins@redhat.com>
+Code-Review+2: Alan Pevec <alan.pevec@redhat.com>
+Submitted-by: Alan Pevec <alan.pevec@redhat.com>
+Submitted-at: Tue, 19 Apr 2016 08:58:04 -0400
+Reviewed-on: https://review.gerrithub.io/273470
+Project: openstack-packages/magnum
+Branch: refs/heads/rpm-mitaka
